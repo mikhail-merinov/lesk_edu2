@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 import com.lesk.test1.Entity.Entity;
 import com.lesk.test1.Source.Source;
@@ -22,6 +23,7 @@ public class Meter extends Entity {
 	private int digitsRight; // Цифр справа от запятой
 	private double regConst; // Коэффициент трансформации
 	private List<MeterRead> mrList; // Список показаний
+
 
 	// === getter ===
 	public String getBadgeNumber() {return badgeNumber;	}

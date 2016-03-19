@@ -86,7 +86,7 @@ public abstract class Entity {
 			}
 		}
 		// Сортируем
-		if (sort) Collections.sort(sortedList, new sortDate());
+		if (sort) Collections.sort(sortedList);
 		return sortedList;
 	}
 	
@@ -96,12 +96,12 @@ public abstract class Entity {
 	}
 
 	// Для сортировки списка характеристик
-	public class sortDate implements Comparator<Char> {
-		@Override
-		public int compare(Char o1, Char o2) {
-			return o1.getCharDate().compareTo(o2.getCharDate());
-		}
-	}
+//	public class sortDate implements Comparator<Char> {
+//		@Override
+//		public int compare(Char o1, Char o2) {
+//			return o1.getCharDate().compareTo(o2.getCharDate());
+//		}
+//	}
 
 	// Удалить характеристику из списка
 	public void removeChar(String charType, Date charDate) {

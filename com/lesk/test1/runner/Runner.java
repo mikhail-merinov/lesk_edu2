@@ -22,7 +22,7 @@ public class Runner {
 	
 	public static void main(String[] args) {
 		// Проверка характеристик
-		Entity chl = new Entity();
+		Entity chl = new Meter();
 		Char ch;
 
 		title("*** Добавление характеристики два раза ***");

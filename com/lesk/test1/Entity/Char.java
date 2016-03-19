@@ -3,7 +3,7 @@ package com.lesk.test1.Entity;
 import java.sql.Date;
 
 // Этот класс хранить характеристику
-public class Char {
+public class Char implements Comparable<Char>{
 	String charType;
 	String charVal;
 	Date charDate;
@@ -67,6 +67,11 @@ public class Char {
 		} else if (!charType.equals(other.charType))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Char o) {
+		return this.getCharDate().compareTo(o.getCharDate());
 	}
 
 }

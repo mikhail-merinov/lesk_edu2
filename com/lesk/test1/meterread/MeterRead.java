@@ -25,6 +25,13 @@ public class MeterRead extends Entity implements Comparable<MeterRead>{
 		this.val = val;
 		//chList = new CharList(id);
 	}
+	
+	public MeterRead(double val, Date d) {
+		this.id = new MeterRead_Id();
+		this.val = val;
+		this.mtrDt = d;
+		//chList = new CharList(id);
+	}
         
 	@Override
 	public String toString() {
