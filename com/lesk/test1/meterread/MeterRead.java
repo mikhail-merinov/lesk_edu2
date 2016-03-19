@@ -6,7 +6,7 @@ import com.lesk.test1.Entity.Entity;
 import com.lesk.test1.Source.Source;
 
 // Класс для работы с ПОКАЗАНИЯМИ
-public class MeterRead extends Entity {
+public class MeterRead extends Entity implements Comparable<MeterRead>{
 
 	private MeterRead_Id id;   // Id показаний
 	private Date mtrDt;        // Дата показаний
@@ -72,5 +72,10 @@ public class MeterRead extends Entity {
 		} else if (!source.equals(other.source))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(MeterRead arg1) {		
+		return this.getMtrDt().compareTo(arg1.getMtrDt());
 	}
 }

@@ -16,5 +16,4 @@ public class Meter_Id extends Simple_Id {
 	}
 
 
-	
 }

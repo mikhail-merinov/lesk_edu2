@@ -1,15 +1,17 @@
 package com.lesk.test1.account;
+import java.math.BigDecimal;
 import java.sql.Date;
 
 import com.lesk.test1.Entity.Entity;
 
 // Класс для работы со СЧЕТАМИ
-public class Account extends Entity {
+public class Account extends Entity implements AccountInt {
 	
 	private String name;            // Имя
 	private Account_Id id;          // Идентификатор
 	private Date startDt;           // Начало действия счета
 	private String passport;        // Номер паспорта
+	private BigDecimal balance; 
 
 // === Setters ================================================================
 	public void setPassport(String passport) 	{ this.passport = passport; }
@@ -57,5 +59,10 @@ public class Account extends Entity {
 	@Override
 	public String toString() {
 		return "Account [name=" + name + ", id=" + id + ", startDt=" + startDt + ", passport=" + passport + "]";
+	}
+	@Override
+	public BigDecimal getBalance() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

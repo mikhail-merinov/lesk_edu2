@@ -10,4 +10,5 @@ public class MeterRead_Id extends Simple_Id {
 	MeterRead_Id(String id) {
 		super(id);
 	}
+	
 }

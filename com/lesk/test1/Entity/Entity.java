@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 
 // Класс для хранения списка характеристик
-public class Entity {
+public abstract class Entity {
 	private List<Char> charList; // Список характеристик
 
 	// Конструктор с параметром Simple_Id
@@ -62,6 +62,7 @@ public class Entity {
 				}
 			}
 		}
+		
 		return charValue;
 	}
 
@@ -87,6 +88,11 @@ public class Entity {
 		// Сортируем
 		if (sort) Collections.sort(sortedList, new sortDate());
 		return sortedList;
+	}
+	
+	public List<Char> getCharList() {
+
+		return charList;
 	}
 
 	// Для сортировки списка характеристик

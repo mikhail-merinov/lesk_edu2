@@ -42,7 +42,7 @@ public class Meter extends Entity {
 	public void setRegConst(double regConst) 		{	this.regConst = regConst;		}
 
 	// === inits ===
-	void initDefault() {
+	private void initDefault() {
 		badgeNumber = "";
 		id = new Meter_Id();
 		receiveDt = null;
@@ -123,7 +123,7 @@ public class Meter extends Entity {
 			System.out.println("Показаний нет, счётчик не подключен!");
 		} else {
 			if(sort) {
-				Collections.sort(printList, new CustomComparator());
+				Collections.sort(printList);
 				System.out.println("Список, отсортированных по дате, показаний абонента:");
 			} else {
 				System.out.println("Список показаний абонента:");
@@ -152,15 +152,15 @@ public class Meter extends Entity {
 //	}
 
 	// Класс для сортировки списка показаний
-	public class CustomComparator implements Comparator<MeterRead> {
-		@Override
-		public int compare(MeterRead arg0, MeterRead arg1) {
-			return arg0.getMtrDt().compareTo(arg1.getMtrDt());
-		}
-	}
+//	public class CustomComparator implements Comparator<MeterRead> {
+//		@Override
+//		public int compare(MeterRead arg0, MeterRead arg1) {
+//			return arg0.getMtrDt().compareTo(arg1.getMtrDt());
+//		}
+//	}
 
 	public MeterRead getLastMeterRead() {
-		return Collections.max(mrList, new CustomComparator());
+		return Collections.max(mrList);
 	}
 
 	// -----------------------------------------------------------------------------
